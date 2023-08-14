@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <style>
+        *{
+            text-align: center;
+        }
+    </style>
+    <script>
+        var grades = [90,85,100,80,90,100,50,90,100,85,80,90,100];
+        //go to grades array and change the value of 6th position to 100.
+        grades[6]=100;
+        //console.log(grades);
+        //console.log(grades[5]);
+        var avg=0;
+        for (var index=0;index<grades.length;index++){
+            console.log(grades[index]);
+            avg+=grades[index];
+        }
+
+        console.log("total grades: ",grades.length);
+        console.log("average: ",(avg/grades.length))
+
+        var name="baraa";
+        for (var index=0;index<name.length;index++){
+            console.log(name[index]);
+        }
+
+        console.log();
+
+    </script>
+</head>
+<body>
+    <h1>loops</h1><hr/>
+</body>
+</html>
