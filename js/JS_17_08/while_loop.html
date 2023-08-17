@@ -12,11 +12,13 @@
     <script>
       var userNumber = prompt("Please enter a number..."); //get a number from the user
       var temp = userNumber; //insert userNumber value into temp variable
-      var totalNumber = 0; //will use to count the digits;
+      var totalNumber = 0,
+        sum = 0; //will use to count the digits;
       while (temp > 0) {
         //as long as temp is higher then zero.
-        console.log(temp);
+        //console.log(temp);
         totalNumber++; //we have a digit
+        sum += temp % 10;
         //temp/=10; //divide temp by 10 (will it work?)
         temp = parseInt(temp / 10);
       }
@@ -27,6 +29,9 @@
         totalNumber,
         " digits"
       );
+      console.log("avg: ", sum / totalNumber);
+      console.log("sum: ", sum);
+      console.log("total digits: ", userNumber.length);
     </script>
   </head>
   <body>

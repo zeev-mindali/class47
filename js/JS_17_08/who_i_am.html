@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        text-align: center;
+      }
+    </style>
+    <script>
+      //   var userAnswer = prompt("Are you an idiot?");
+      //   while (userAnswer != "yes") {
+      //     userAnswer = prompt("didn't understand, are you an idiot?");
+      //   }
+      //   alert("we agree that you are an idiot!");
+
+      var userPass = prompt("please enter a password");
+      var attempts = 1;
+      while (userPass != "12345" && attempts < 5) {
+        console.log("wrong password attempt: ", attempts);
+        userPass = prompt("wrong password, please try again");
+        attempts++;
+        //console.log("attempt number: ", attempts);
+      }
+
+      //   if (userPass == "12345" && attempts < 5) {
+      //     console.log("Hello my master");
+      //   } else {
+      //     console.log("Why who are you?");
+      //   }
+
+      //
+      console.log(
+        userPass == "12345" && attempts < 5 //condition
+          ? "hello my master" //true
+          : "why who are you?" //false
+      );
+    </script>
+  </head>
+  <body>
+    <h1>Hello dumb ass</h1>
+    <hr />
+  </body>
+</html>

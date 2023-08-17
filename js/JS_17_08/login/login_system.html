@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login system</title>
+    <style>
+      * {
+        text-align: center;
+      }
+    </style>
+    <script src="js/myjs.js"></script>
+  </head>
+  <body>
+    <h1>Login system</h1>
+    <hr />
+    <div>
+      <input type="text" placeholder="Enter user" id="userName" /><br /><br />
+      <input
+        type="password"
+        placeholder="Enter password"
+        id="userPass"
+      /><br /><br />
+      <input type="button" value="login" onclick="checkLogin()" />
+    </div>
+    <hr />
+    <div id="result"></div>
+  </body>
+</html>
