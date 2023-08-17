@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date And Math</title>
+    <style>
+      * {
+        text-align: center;
+      }
+    </style>
+    <script>
+      var userNumber = prompt("Please enter a number..."); //get a number from the user
+      var temp = userNumber; //insert userNumber value into temp variable
+      var totalNumber = 0; //will use to count the digits;
+      while (temp > 0) {
+        //as long as temp is higher then zero.
+        console.log(temp);
+        totalNumber++; //we have a digit
+        //temp/=10; //divide temp by 10 (will it work?)
+        temp = parseInt(temp / 10);
+      }
+      console.log(
+        "total number of ",
+        userNumber,
+        " is ",
+        totalNumber,
+        " digits"
+      );
+    </script>
+  </head>
+  <body>
+    <h1>While</h1>
+  </body>
+</html>
