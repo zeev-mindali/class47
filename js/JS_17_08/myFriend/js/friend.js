@@ -11,6 +11,15 @@ function loadImage(){
     friendTel.push(telData);    //add telephone to array
     friendName.push(nameData); //add name to array
 
+    createTable();
+   
+    document.getElementById("friendForm").reset();    
+   
+    //oh no, it's me again
+    //var zeev ="<tr><td>"+imageURL+"</td><td>"+friendName+"</td><td>"+friendTel+"</td></tr>";
+}
+
+function createTable(){
     var data = document.getElementById("data");                     //output
 
     //backtick => ` ~=>tilda
@@ -28,9 +37,19 @@ function loadImage(){
     }
 
     data.innerHTML=info;
-    urlData="";
-    telData="";
-    nameData="";
-    //oh no, it's me again
-    //var zeev ="<tr><td>"+imageURL+"</td><td>"+friendName+"</td><td>"+friendTel+"</td></tr>";
+}
+
+function clearTable(){
+    document.getElementById("data").innerHTML="";
+    //erase all data from array
+    imageURL = [];
+    friendTel = [];
+    friendName = [];
+}
+
+function removeLast(){
+    imageURL.pop();
+    friendTel.pop();
+    friendName.pop();
+    createTable();
 }

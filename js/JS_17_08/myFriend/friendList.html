@@ -11,21 +11,25 @@
     <h1>Friend List</h1>
     <hr />
     <div class="imgForm">
-      <input type="url" id="imageURL" placeholder="enter image url" /><br />
-      <input
-        type="text"
-        id="friendName"
-        placeholder="enter friend name"
-      /><br />
-      <input
-        type="tel"
-        id="friendTel"
-        placeholder="enter friend telephone"
-      /><br />
-      <input type="button" value="load image" onclick="loadImage()" />
+      <form id="friendForm">
+        <input type="url" id="imageURL" placeholder="enter image url" /><br />
+        <input
+          type="text"
+          id="friendName"
+          placeholder="enter friend name"
+        /><br />
+        <input
+          type="tel"
+          id="friendTel"
+          placeholder="enter friend telephone"
+        /><br />
+        <input type="button" value="load image" onclick="loadImage()" />
+      </form>
     </div>
     <br />
     <!-- <img src="img/nouser.png" id="friendImage" width="100" /> -->
+    <input type="button" value="clear table" onclick="clearTable()" />
+    <input type="button" value="remove last" onclick="removeLast()" />
     <table id="friendList">
       <tr>
         <th>image</th>
