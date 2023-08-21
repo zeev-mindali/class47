@@ -1,17 +1,36 @@
+var imageURL = [];
+var friendTel = [];
+var friendName = [];
+
 function loadImage(){
-    var img = document.getElementById("imageURL").value;
-    var friendName = document.getElementById("friendName").value;
-    var friendTel = document.getElementById("friendTel").value;
-    //document.getElementById("friendImage").src = img;
-    document.getElementById("friendList").innerHTML=`
-    <tr>
-      <td>
-         <img src="${img}" width="50"/>
-      </td>
-      <td>
-        ${friendName}
-      </td>
-      <td>
-        ${friendTel}
-      </td>`;
+    var urlData = document.getElementById("imageURL").value;       //input
+    var telData = document.getElementById("friendTel").value;     //input
+    var nameData = document.getElementById("friendName").value;   //input
+
+    imageURL.push(urlData);     //add data to array
+    friendTel.push(telData);    //add telephone to array
+    friendName.push(nameData); //add name to array
+
+    var data = document.getElementById("data");                     //output
+
+    //backtick => ` ~=>tilda
+
+    var info = "";
+
+    for (var index=0;index<imageURL.length;index++){
+        info += `
+        <tr>
+            <td><img src="${imageURL[index]}"/></td>
+            <td>${friendName[index]}</td>
+            <td>${friendTel[index]}</td>
+        </tr>
+    `
+    }
+
+    data.innerHTML=info;
+    urlData="";
+    telData="";
+    nameData="";
+    //oh no, it's me again
+    //var zeev ="<tr><td>"+imageURL+"</td><td>"+friendName+"</td><td>"+friendTel+"</td></tr>";
 }

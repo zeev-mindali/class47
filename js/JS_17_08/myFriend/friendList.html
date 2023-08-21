@@ -4,23 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="js/friend.js"></script>
-    <style>
-      * {
-        text-align: center;
-      }
-      .imgForm {
-        border: 1px solid black;
-        border-radius: 20px;
-        box-shadow: 2px 2px 2px 1px black;
-        width: 15%;
-        margin: auto;
-        padding: 20px;
-      }
-      input {
-        margin-bottom: 20px;
-      }
-    </style>
+    <script defer src="js/friend.js"></script>
+    <link rel="stylesheet" href="css/myFriend.css" />
   </head>
   <body>
     <h1>Friend List</h1>
@@ -41,8 +26,13 @@
     </div>
     <br />
     <!-- <img src="img/nouser.png" id="friendImage" width="100" /> -->
-    <table>
-      <tbody id="friendList"></tbody>
+    <table id="friendList">
+      <tr>
+        <th>image</th>
+        <th>friend name</th>
+        <th>friend phone</th>
+      </tr>
+      <tbody id="data"></tbody>
     </table>
   </body>
 </html>
