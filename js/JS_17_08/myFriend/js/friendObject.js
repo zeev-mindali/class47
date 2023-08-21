@@ -1,5 +1,5 @@
-var friendList = [];
-loadData();
+var friendList = [];  //declare friendsList as empty array
+loadData();  //call to function named loadData()
 
 function loadImage(){
     var urlData = document.getElementById("imageURL").value;       //input
