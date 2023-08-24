@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>localstorage error</title>
+    <style>
+      * {
+        text-align: center;
+      }
+    </style>
+    <script>
+      //הצהרה על מערך גלובלי
+      var myData = [];
+
+      const saveData = () => {
+        //קישור לאלמנט שנמצא בדף
+        var userData = document.getElementById("uData").value;
+        //הכנס את הנתונים מתוך פונקצייה העלאת המידע
+        var newData = loadData();
+        newData.push(userData);
+        localStorage.setItem("data", JSON.stringify(newData));
+      };
+
+      const loadData = () => {
+        myData = JSON.parse(localStorage.getItem("data")) || [];
+        return myData;
+      };
+
+      //   const loadData = () => {
+      //     //גישה לאיחסון המקומי וקבלת המידע
+      //     myData = JSON.parse(localStorage.getItem("data"));
+      //     //(null) במידה והאובייקט הוא סתמי
+      //     if (!myData) {
+      //       //אפס את הערך למערך ריק
+      //       myData = [];
+      //     }
+      //     //החזר את המשתנה
+      //     return myData;
+      //   };
+
+      loadData();
+    </script>
+  </head>
+  <body>
+    <h1>Huston we have a problem (apollo 13)</h1>
+    <hr />
+    <input type="text" id="uData" placeholder="write something" />
+    <input type="button" value="save data" onclick="saveData()" />
+    <hr />
+    <div id="lsData"></div>
+  </body>
+</html>
