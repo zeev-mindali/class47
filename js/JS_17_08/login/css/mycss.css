@@ -1,0 +1,40 @@
+* {
+    text-align: center;
+  }
+  .loginForm {
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 1px black;
+    width: 15%;
+    margin: auto;
+    padding: 20px;
+  }
+  input {
+    margin-bottom: 20px;
+  }
+  #friendList {
+    border-collapse: collapse;
+    width:50%;
+    margin: auto;
+  }
+  #friendList td, #friendList th{
+        border: 1px solid #ddd;
+        padding: 8px;
+  }
+  #friendList tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+  #friendList tr:hover{
+   background-color: #ddd; 
+  }
+
+  #friendList th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #04aa6d;
+    color: white;
+  }
+  img{
+    width: 100px;
+  }

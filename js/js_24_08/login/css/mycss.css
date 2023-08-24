@@ -1,0 +1,14 @@
+* {
+    text-align: center;
+  }
+  .loginForm {
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 1px black;
+    width: 15%;
+    margin: auto;
+    padding: 20px;
+  }
+  input {
+    margin-bottom: 20px;
+  }
