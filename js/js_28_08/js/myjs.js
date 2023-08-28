@@ -57,7 +57,8 @@ var makeList = ()=>{
     for (var counter=0;counter<myList.length;counter++){
         menu.appendChild(makeItem(myList[counter]));
     }
-    menu.appendChild(makeHR("Zeevik the fox"));
+    //menu.appendChild(makeHR("Zeevik the fox"));
+    menu.appendChild(makeHR(menu.firstChild.textContent))
 }
 
 var makeItem=(menuItem)=>{
@@ -66,7 +67,7 @@ var makeItem=(menuItem)=>{
     return li;
 }
 
-var makeHR=(userName)=>{
+var makeHR=(itemName)=>{
     //hr
     //h1 text
     //hr
@@ -74,11 +75,11 @@ var makeHR=(userName)=>{
     //create children for the parent myDiv
     var myHR = document.createElement('hr');    
     var myName = document.createElement('h1');
-    myName.textContent = userName;
+    myName.textContent = itemName;
     //connect the children to parent
     myDiv.appendChild(myHR);
     myDiv.appendChild(myName);
-    myDiv.appendChild(myHR);
+    //myDiv.appendChild(myHR);
     console.log(myDiv);
     return myDiv
 }
