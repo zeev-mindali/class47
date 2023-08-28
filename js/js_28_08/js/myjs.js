@@ -57,11 +57,28 @@ var makeList = ()=>{
     for (var counter=0;counter<myList.length;counter++){
         menu.appendChild(makeItem(myList[counter]));
     }
-    
+    menu.appendChild(makeHR("Zeevik the fox"));
 }
 
 var makeItem=(menuItem)=>{
     var li = document.createElement('li');
     li.textContent= menuItem;
     return li;
+}
+
+var makeHR=(userName)=>{
+    //hr
+    //h1 text
+    //hr
+    var myDiv = document.createElement('div');
+    //create children for the parent myDiv
+    var myHR = document.createElement('hr');    
+    var myName = document.createElement('h1');
+    myName.textContent = userName;
+    //connect the children to parent
+    myDiv.appendChild(myHR);
+    myDiv.appendChild(myName);
+    myDiv.appendChild(myHR);
+    console.log(myDiv);
+    return myDiv
 }
